@@ -6,26 +6,13 @@ public class Exercicio25 {
 	public void run() {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Digite uma nota: ");
-		float notaA = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaB = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaC = input.nextFloat();	
-		
-		float media;
-		
-		media = notaA + notaB + notaC / 3;
-		if ( media > 3) { 
-			System.out.println("Media :" + media);
-			System.out.println("Exame");
-		} else if (media > 7) {
-				System.out.println("Media :" + media);
-				System.out.println("Aprovado");
-			} else {
-					System.out.println("Media :" + media);
-					System.out.println("Reprovado");
-				}
-		input.close();
+		float valor, soma = 0;
+
+		for (;;) {
+			System.out.println("Digite um valor");
+			valor = input.nextFloat();
+			soma += valor;
+			System.out.println("Soma: " + soma);
+		}		
 	}
 }

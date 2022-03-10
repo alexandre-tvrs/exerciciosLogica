@@ -6,26 +6,24 @@ public class Exercicio30 {
 	public void run() {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Digite uma nota: ");
-		float notaA = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaB = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaC = input.nextFloat();	
+		int y = 0, x = 0; 
 		
-		float media;
+		System.out.println("Digite o valor do coeficiente a: ");
+		int a = input.nextInt();
+		System.out.println("Digite o valor do coeficiente b: ");
+		int b = input.nextInt();
+		System.out.println("Digite o valor do limite superior: ");
+		int limiteS = input.nextInt();
+		System.out.println("Digite o valor do limite inferior: ");
+		int limiteI = input.nextInt();
+		System.out.println("Digite o valor do incremento de X: ");
+		int i = input.nextInt();
 		
-		media = notaA + notaB + notaC / 3;
-		if ( media > 3) { 
-			System.out.println("Media :" + media);
-			System.out.println("Exame");
-		} else if (media > 7) {
-				System.out.println("Media :" + media);
-				System.out.println("Aprovado");
-			} else {
-					System.out.println("Media :" + media);
-					System.out.println("Reprovado");
-				}
+		System.out.println("x    ||    y");
+		for(x = limiteI; x <= limiteS; x+=i) {
+			y = ((a*x) + b);
+			System.out.println(x +"  ||  " + y);
+		}
 		input.close();
 	}
 }

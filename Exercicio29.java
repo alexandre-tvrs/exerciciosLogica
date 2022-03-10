@@ -6,26 +6,17 @@ public class Exercicio29 {
 	public void run() {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Digite uma nota: ");
-		float notaA = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaB = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaC = input.nextFloat();	
-		
-		float media;
-		
-		media = notaA + notaB + notaC / 3;
-		if ( media > 3) { 
-			System.out.println("Media :" + media);
-			System.out.println("Exame");
-		} else if (media > 7) {
-				System.out.println("Media :" + media);
-				System.out.println("Aprovado");
-			} else {
-					System.out.println("Media :" + media);
-					System.out.println("Reprovado");
-				}
+		System.out.println("digite true ou false");
+		boolean a = input.nextBoolean();
+		System.out.println("digite true ou false");
+	    boolean b = input.nextBoolean();;
+	    System.out.println("digite true ou false");
+	    boolean c = input.nextBoolean();
+
+	    System.out.println("A ou B = " + (a || b));
+	    System.out.println("A ou C = " + (a || c));
+	    System.out.println("B ou C = " + (b || c));
+	    System.out.println("A ou B ou C = " + (a || b || c));
 		input.close();
 	}
 }

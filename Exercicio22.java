@@ -6,26 +6,19 @@ public class Exercicio22 {
 	public void run() {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Digite uma nota: ");
-		float notaA = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaB = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaC = input.nextFloat();	
+		System.out.print("Digite a posicao inicial: ");
+		float p0 = input.nextFloat();	
+		System.out.print("Digite a velocidade: ");
+		float v = input.nextFloat();	
+		System.out.print("Digite a aceleracao: ");
+		float a = input.nextFloat();	
+		System.out.print("Digite o tempo: ");
+		int t = input.nextInt();	
 		
-		float media;
+		float pf = (p0 + ((v * t) + (a * (t * t)))) / 2;
 		
-		media = notaA + notaB + notaC / 3;
-		if ( media > 3) { 
-			System.out.println("Media :" + media);
-			System.out.println("Exame");
-		} else if (media > 7) {
-				System.out.println("Media :" + media);
-				System.out.println("Aprovado");
-			} else {
-					System.out.println("Media :" + media);
-					System.out.println("Reprovado");
-				}
+		System.out.println("A posicao final eh: " + pf);
+		
 		input.close();
 	}
 }

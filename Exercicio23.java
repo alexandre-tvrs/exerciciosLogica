@@ -6,26 +6,17 @@ public class Exercicio23 {
 	public void run() {
 		Scanner input = new Scanner(System.in);
 		
-		System.out.print("Digite uma nota: ");
-		float notaA = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaB = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaC = input.nextFloat();	
+		System.out.print("Digite a posicao inicial: ");
+		float pv = input.nextFloat();	
+		System.out.print("Digite a velocidade: ");
+		float j = input.nextFloat();	
+		System.out.print("Digite o tempo: ");
+		int n = input.nextInt();	
 		
-		float media;
+		float fv = (float) (pv * Math.pow((1 + j), n));
 		
-		media = notaA + notaB + notaC / 3;
-		if ( media > 3) { 
-			System.out.println("Media :" + media);
-			System.out.println("Exame");
-		} else if (media > 7) {
-				System.out.println("Media :" + media);
-				System.out.println("Aprovado");
-			} else {
-					System.out.println("Media :" + media);
-					System.out.println("Reprovado");
-				}
+		System.out.println("O valor de capital eh: " + fv);
+		
 		input.close();
 	}
 }

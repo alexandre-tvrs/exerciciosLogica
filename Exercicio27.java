@@ -5,27 +5,19 @@ import java.util.Scanner;
 public class Exercicio27 {
 	public void run() {
 		Scanner input = new Scanner(System.in);
+
+		float nota = 0, somaNota = 0, n = 0; 
 		
-		System.out.print("Digite uma nota: ");
-		float notaA = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaB = input.nextFloat();	
-		System.out.print("Digite uma nota: ");
-		float notaC = input.nextFloat();	
-		
-		float media;
-		
-		media = notaA + notaB + notaC / 3;
-		if ( media > 3) { 
-			System.out.println("Media :" + media);
-			System.out.println("Exame");
-		} else if (media > 7) {
-				System.out.println("Media :" + media);
-				System.out.println("Aprovado");
-			} else {
-					System.out.println("Media :" + media);
-					System.out.println("Reprovado");
-				}
+		do {
+			System.out.print("Digite uma nota: ");
+			nota = input.nextFloat();	
+			if (nota > 0) {
+			somaNota =+ nota;
+			n++;
+			}
+		} while (nota > 0);
+		n--;
+		System.out.println("Media = " + (somaNota/n));
 		input.close();
 	}
 }
