@@ -11,6 +11,8 @@ public class Exercicio24 {
 		
 		int n = 0;
 		
+		input.close();
+		
 		System.out.println("Usando While");
 		while (n <= 20) {
 			System.out.println(numero + " x " + n + " = " + (numero*n));
@@ -27,6 +29,5 @@ public class Exercicio24 {
 		for(n = 0; n <= 20; n++) {
 			System.out.println(numero + " x " + n + " = " + (numero*n));
 		}
-		input.close();
 	}
 }

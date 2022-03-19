@@ -13,6 +13,8 @@ public class Exercicio25 {
 			valor = input.nextFloat();
 			soma += valor;
 			System.out.println("Soma: " + soma);
+			input.close();
 		}		
+		
 	}
 }
